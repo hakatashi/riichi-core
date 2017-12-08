@@ -381,6 +381,7 @@ module.exports = class Kyoku implements EventEmitter::
       tenpaiDecomp
       fuuro
       menzen
+      additionalDora: 0
       riichi
 
       chancha: @chancha
@@ -459,4 +460,3 @@ module.exports = class Kyoku implements EventEmitter::
     @phase = \end
 
   # }}}
-

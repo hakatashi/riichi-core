@@ -21,6 +21,7 @@ require! {
 #   `tenpaiDecomp`: corresponds to `juntehai`
 #   `fuuro`
 #   `menzen`
+#   `additionalDora`: additional doras e.g. nuki dora
 #   `riichi`: {accepted, double, ippatsu}
 #
 #   ===== players =====
@@ -45,7 +46,7 @@ require! {
 # OUTPUT:
 #   `isAgari`: true/false
 #   `delta`: score gains for each agariPlayer
-#   `dora`: number of {dora, uraDora, akaDora}
+#   `dora`: number of {dora, uraDora, akaDora, additionalDora}
 #   `doraTotal`: sum of `dora`
 #   highest-points interpretation:
 #     `basicPoints`: "net worth" of the hand
@@ -83,7 +84,7 @@ module.exports = class Agari
 
     # dora
     with @dora = getDora @
-      @doraTotal = ..dora + ..uraDora + ..akaDora
+      @doraTotal = ..dora + ..uraDora + ..akaDora + ..additionalDora
 
     # maximize basic points over all decompositions
     maxBasicPoints = 0
@@ -152,7 +153,7 @@ function countFuuroFu({fuuro})
 #   `.dora`
 function getDora({
   rulevar: {dora: {ura, kan, kanUra}}
-  tehai, fuuro, riichi
+  tehai, fuuro, riichi, additionalDora
   doraHyouji, uraDoraHyouji, nKan
 })
   dora = doraHyouji.map (.succDora)
@@ -162,7 +163,7 @@ function getDora({
   else
     uraDora = []
 
-  ret = dora: 0, uraDora: 0, akaDora: 0
+  ret = dora: 0, uraDora: 0, akaDora: 0, additionalDora: additionalDora
   for p in tehai
     if p.isAkahai then ret.akaDora++
     p .= equivPai
