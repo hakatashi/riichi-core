@@ -1,5 +1,5 @@
 {
-  "name": "riichi-core",
+  "name": "@hakatashi/riichi-core",
   "version": "1.0.3",
   "description": "Riichi Mahjong game engine",
   "main": "index.js",
