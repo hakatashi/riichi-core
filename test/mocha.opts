@@ -1,4 +1,5 @@
---compilers ls:livescript
+--require livescript
+--extension ls
 --colors
 --inline-diffs
 --bail

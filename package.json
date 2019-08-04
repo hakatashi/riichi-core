@@ -19,19 +19,19 @@
   },
   "homepage": "https://github.com/summivox/riichi-core#readme",
   "dependencies": {
-    "chai": "^3.4.1",
-    "lodash.clonedeep": "^3.0.1",
-    "lodash.merge": "^3.3.2",
-    "performance-now": "^0.2.0"
+    "chai": "^4.2.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.merge": "^4.6.2",
+    "performance-now": "^2.1.0"
   },
   "devDependencies": {
-    "app-root-path": "^1.0.0",
-    "chai-shallow-deep-equal": "^1.4.0",
-    "fs-extra-promise": "^0.3.1",
-    "globby": "^4.1.0",
-    "istanbul": "^0.4.3",
-    "livescript": "^1.5.0",
-    "mocha": "^2.5.3"
+    "app-root-path": "^2.2.1",
+    "chai-shallow-deep-equal": "^1.4.6",
+    "fs-extra-promise": "^1.0.1",
+    "globby": "^10.0.1",
+    "istanbul": "^0.4.5",
+    "livescript": "^1.6.0",
+    "mocha": "^6.2.0"
   },
   "scripts": {
     "watch": "lsc -cw src/",
